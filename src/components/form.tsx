@@ -1,10 +1,11 @@
 import type { Category, Activity } from '../types';
 import { categories } from '../data/categories';
-import { ChangeEvent, Dispatch, FormEvent, useState } from 'react';
-import { ActivityActions } from '../reducers/activity.reducer';
+import { ChangeEvent, Dispatch, FormEvent, useState, useEffect } from 'react';
+import { ActivityActions, ActivityState } from '../reducers/activity.reducer';
 
 type FormProps = {
   dispatch: Dispatch<ActivityActions>;
+  state: ActivityState;
 };
 const Initial_Values: Activity = {
   id: crypto.randomUUID(),
@@ -13,8 +14,17 @@ const Initial_Values: Activity = {
   calories: 0,
 };
 
-const Form = ({ dispatch }: FormProps) => {
+const Form = ({ dispatch, state }: FormProps) => {
   const [activity, setActivity] = useState<Activity>(Initial_Values);
+
+  useEffect(() => {
+    if (state.activeId) {
+      const selectedActivity = state.activities.filter(
+        (stateActivity) => stateActivity.id === state.activeId,
+      )[0];
+      setActivity(selectedActivity);
+    }
+  }, [state.activeId]);
 
   const handleChange = (
     e: ChangeEvent<HTMLSelectElement> | ChangeEvent<HTMLInputElement>,
