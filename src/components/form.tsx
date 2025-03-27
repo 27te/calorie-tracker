@@ -82,7 +82,7 @@ const Form = ({ dispatch, state }: FormProps) => {
         />
       </div>
       <div className='grid grid-cols-1 gap-3'>
-        <label htmlFor='calories'>Calorias:</label>
+        <label htmlFor='calories'>Calorías:</label>
         <input
           type='text'
           id='calories'

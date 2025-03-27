@@ -32,7 +32,7 @@ const ActivityList = ({ activities, dispatch }: ActivityListProps) => {
             <div className='space-y-2 relative'>
               <p
                 className={`absolute -top-10 -left-5 px-10 py-2 text-white uppercase font-bold rounded-br-md ${
-                  activity.category === 1 ? 'bg-lime-500' : 'bg-orange-500'
+                  activity.category === 1 ? 'bg-orange-500' : 'bg-blue-500'
                 }`}
               >
                 {categoryName(+activity.category)}
