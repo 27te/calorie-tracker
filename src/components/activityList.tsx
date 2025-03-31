@@ -21,19 +21,18 @@ const ActivityList = ({ activities, dispatch }: ActivityListProps) => {
       </h1>
       {activities.length == 0 ? (
         <p className='text-2xl text-gray-600 text-center mt-10'>
-          No hay registros...
+          No hay registros!
         </p>
       ) : (
         activities.map((activity) => (
           <div
             key={activity.id}
-            className='px-5 bg-white py-10 mt-5 flex justify-between rounded-md overflow-hidden shadow-sm'
+            className='px-5 bg-white py-10 mt-5 flex justify-between rounded-md overflow-hidden shadow-md'
           >
             <div className='space-y-2 relative'>
               <p
-                className={`absolute -top-10 -left-5 px-10 py-2 text-white uppercase font-bold rounded-br-md ${
-                  activity.category === 1 ? 'bg-orange-500' : 'bg-blue-500'
-                }`}
+                className={`absolute -top-10 -left-5 px-10 py-2 text-white uppercase font-bold rounded-br-md ${activity.category === 1 ? 'bg-orange-500' : 'bg-blue-500'
+                  }`}
               >
                 {categoryName(+activity.category)}
               </p>
