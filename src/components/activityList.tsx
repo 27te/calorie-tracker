@@ -8,7 +8,7 @@ type ActivityListProps = {
   activities: Activity[];
   dispatch: Dispatch<ActivityActions>;
 };
-const ActivityList = ({ activities, dispatch }: ActivityListProps) => {
+export const ActivityList = ({ activities, dispatch }: ActivityListProps) => {
   const categoryName = useMemo(
     () => (category: Activity['category']) =>
       categories.map((cat) => (cat.id === category ? cat.name : '')),
@@ -73,5 +73,3 @@ const ActivityList = ({ activities, dispatch }: ActivityListProps) => {
     </>
   );
 };
-
-export default ActivityList;

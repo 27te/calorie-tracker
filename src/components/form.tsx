@@ -14,7 +14,7 @@ const Initial_Values: Activity = {
   calories: 0,
 };
 
-const Form = ({ dispatch, state }: FormProps) => {
+export const Form = ({ dispatch, state }: FormProps) => {
   const [activity, setActivity] = useState<Activity>(Initial_Values);
 
   useEffect(() => {
@@ -102,4 +102,3 @@ const Form = ({ dispatch, state }: FormProps) => {
   );
 };
 
-export default Form;
