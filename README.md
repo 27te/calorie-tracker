@@ -1,17 +1,21 @@
 # Calorie Tracker App Documentation
 
-## Overview
+## Overviews
+
 The Calorie Tracker App is a React-based web application designed to help users monitor their daily caloric intake and maintain healthy eating habits.
 
 ## Technical Architecture
 
 ### Frontend Components
+
 1. **App Component (`App.js`)**
+
    - Main application container
    - Handles routing and state management
    - Renders child components
 
 2. **CalorieTracker Component (`CalorieTracker.js`)**
+
    - Manages food entry inputs
    - Calculates total daily calories
    - Displays nutritional summaries
