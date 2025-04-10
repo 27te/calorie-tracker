@@ -32,3 +32,11 @@ The Calorie Tracker App is a React-based web application designed to help users 
 3. CalorieTracker component calculates total calories based on user inputs.
 4. FoodList component renders the list of food entries.
 5. User can delete entries or sort/filter the list.
+
+### Technologies Used
+
+- React
+- React Router
+- React Hooks (useState, useEffect)
+- CSS (for styling)
+- Bun
